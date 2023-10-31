@@ -1,4 +1,4 @@
-Folosim imagine de baza Node.js
+#Folosim imagine de baza Node.js
 FROM node:14
 
 #Setam directorul de lucru
