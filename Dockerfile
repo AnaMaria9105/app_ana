@@ -2,7 +2,7 @@
 FROM node:14
 
 #Setam directorul de lucru
-WORKDIR /app
+WORKDIR /app_ana
 
 #Copiem toate fisierele si directoarele din directorul curent in container
 COPY . .
