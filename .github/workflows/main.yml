@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Login to AWS ECR
-        run:  aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/c0u0j1e0
+        run:  aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 236507926622.dkr.ecr.eu-central-1.amazonaws.com
         env:  
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }} 
           AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
@@ -23,7 +23,7 @@ jobs:
         run: docker build -t repositorydemo .
 
       - name: Tag Docker Image
-        run: docker tag repositorydemo:latest public.ecr.aws/c0u0j1e0/repositorydemo:latest
+        run: docker tag repositorydemo:latest 236507926622.dkr.ecr.eu-central-1.amazonaws.com/repositorydemo:latest
 
       - name: Push Docker Image
-        run: docker push public.ecr.aws/c0u0j1e0/repositorydemo:latest
+        run: docker push 236507926622.dkr.ecr.eu-central-1.amazonaws.com/repositorydemo:latest
