@@ -11,7 +11,7 @@ COPY . .
 RUN npm install
 
 #Expunem portul pe care se ruleaza aplciatia
-EXPOSE 5000
+EXPOSE 80
 
 #Coamanda de pornire a aplciatiei
 CMD ["npm","start"]
