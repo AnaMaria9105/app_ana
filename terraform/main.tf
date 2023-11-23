@@ -32,7 +32,7 @@ resource "aws_security_group" "my_sg" {
   }
 }
 
-resource "aws_instance" "EC2Test" {
+resource "aws_instance" "EC2Demo" {
   ami             = "ami-06dd92ecc74fdfb36"
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.my_subnet.id
@@ -40,6 +40,6 @@ resource "aws_instance" "EC2Test" {
   key_name        = "KeyDemo"
 
   tags = {
-    Name = "MyInstance"
+    Name = "EC2Demo"
   }
 }
