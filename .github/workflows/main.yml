@@ -6,7 +6,8 @@ on:
       - main
     paths-ignore:
       - 'terraform/**'
-
+      - .github/workflows/terraform.yml
+ 
 jobs:
     build:
       runs-on: ubuntu-latest
