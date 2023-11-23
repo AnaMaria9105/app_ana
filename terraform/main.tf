@@ -40,6 +40,6 @@ resource "aws_instance" "EC2Demo" {
   key_name        = "KeyDemo"
 
   tags = {
-    Name = "EC2Demo3"
+    Name = "EC2Demo4"
   }
 }
