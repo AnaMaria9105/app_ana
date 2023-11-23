@@ -1,0 +1,38 @@
+name: Terraform CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'terraform/**'
+
+jobs:
+  terraform:
+    name: Terraform
+    runs-on: ubuntu-latest
+
+    steps: 
+    - name: checkout repository 
+      uses: actions/checkout@v2
+
+    - name: setup terraform
+      uses: hashicorp/setup-terraform@v1
+
+    - name: terraform init
+      run: terraform init -backend-config="profile=default"
+
+    - name: terraform validate
+      run: terraform validate
+      
+    - name: terraform plan
+      run: terraform plan
+
+    - name: terraform apply
+      run: terraform apply 
+
+      
+
+      
+       
+      
